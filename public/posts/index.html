@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - DizzyLand">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ae3008a6368e0066eb46796750a58b2b721de03ac8c21e009d13409fa6513123.css" integrity="sha256-rjAIpjaOAGbrRnlnUKWLK3Id4DrIwh4AnRNAn6ZRMSM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -57,6 +57,7 @@
 
     </style>
 </noscript>
+
 </head>
 
 <body class="list" id="top">
@@ -158,66 +159,45 @@ Prerequisites Windows operating system Administrator privileges Internet connect
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Golang-排序
+    <h2 class="entry-hint-parent">Golang-sort
     </h2>
   </header>
   <div class="entry-content">
-    <p>一般排序 基本的sort套件。
-package main import ( &#34;fmt&#34; &#34;sort&#34; ) func main() { //sort int s1 := []int{8, 2, 6, 3, 1, 4} sort.Ints(s1) fmt.Println(s1) //sot int reverse sort.Sort(sort.Reverse(sort.IntSlice(s1))) fmt.Println(s1) //sort string s2 := []string{&#34;aaa&#34;, &#34;bbb&#34;, &#34;6&#34;, &#34;3&#34;, &#34;1&#34;, &#34;4&#34;} sort.Strings(s2) fmt.Println(s2) //sot string reverse sort.Sort(sort.Reverse(sort.StringSlice(s2))) fmt.Println(s2) //sort float64 s3 := []float64{1, 1.2, 0, -1.9, -82.333, 99.11} sort.Float64s(s3) fmt.Println(s3) //sot float64 reverse sort.Sort(sort.Reverse(sort.Float64Slice(s3))) fmt.Println(s3) } 物件排序 物件列表指定參數排序。
-package main import ( &#34;fmt&#34; &#34;sort&#34; ) type Data struct { ID int Name string } func main() { //sort struct ds := []Data{} ds = append(ds, Data{ID: 49, Name: &#34;kevin&#34;}) ds = append(ds, Data{ID: 11, Name: &#34;peter&#34;}) ds = append(ds, Data{ID: 11, Name: &#34;mary&#34;}) ds = append(ds, Data{ID: 11, Name: &#34;adon&#34;}) ds = append(ds, Data{ID: 15, Name: &#34;lily&#34;}) //sort by id sort.Slice(ds, func(i, j int) bool { return ds[i].ID &lt; ds[j].ID }) fmt.Println(ds) //sort by Name sort.Slice(ds, func(i, j int) bool { return ds[i].Name &lt; ds[j].Name }) fmt.Println(ds) //sort by id reverse sort.Slice(ds, func(i, j int) bool { return ds[i].ID &gt; ds[j].ID }) fmt.Println(ds) } 二階排序 如果Name一樣時，希望再透過ID做二次排序。
+    <p>Looking for efficient ways to sort data in Go? This guide covers everything from basic sorting to advanced techniques!
+🚀 Basic Sorting The sort package provides fundamental sorting capabilities.
+package main import ( &#34;fmt&#34; &#34;sort&#34; ) func main() { //sort int s1 := []int{8, 2, 6, 3, 1, 4} sort.Ints(s1) fmt.Println(s1) //sort int reverse sort.Sort(sort.Reverse(sort.IntSlice(s1))) fmt.Println(s1) //sort string s2 := []string{&#34;aaa&#34;, &#34;bbb&#34;, &#34;6&#34;, &#34;3&#34;, &#34;1&#34;, &#34;4&#34;} sort.Strings(s2) fmt.Println(s2) //sort string reverse sort.Sort(sort.Reverse(sort.StringSlice(s2))) fmt.Println(s2) //sort float64 s3 := []float64{1, 1.2, 0, -1.9, -82.333, 99.11} sort.Float64s(s3) fmt.Println(s3) //sort float64 reverse sort.Sort(sort.Reverse(sort.Float64Slice(s3))) fmt.Println(s3) } 🎯 Object Sorting How to sort a list of objects by specific fields:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-06 21:52:24 +0800 CST'>January 6, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Golang-排序" href="http://localhost:1313/posts/golang-%E6%8E%92%E5%BA%8F/"></a>
+  <footer class="entry-footer"><span title='2025-01-06 21:52:24 +0800 CST'>January 6, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Golang-sort" href="http://localhost:1313/posts/golang-sort/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Sokit簡易TCP/UDP測試工具分享
+    <h2 class="entry-hint-parent">Sokit - A Powerful TCP/UDP Testing Tool You Should Know
     </h2>
   </header>
   <div class="entry-content">
-    <p>優點特性:
-模擬TCP/UDP server (字串或是Hex皆可) 模擬TCP/UDP Client (字串或是Hex皆可) 轉發功能 Github專案 載點
-建立Server-Client: 開啟兩隻程式(如下圖)，一隻模擬TCP Server(左)，一隻模擬TCP Client(右)。
-設定好要使用的IP&#43;PORT，並互相建立連線。
-Client送出字串123，Server接收到字串。
-Server指定Connection列表中的Client目標，並送出999給Client，Client接收到Server送來的字串999。
-HEX通訊 Client送出Hex資料[33 32 31]給Server。(注意:如果要送Hex資料需要使用[ ]將資料包起來)
-Server可以將資料展開，將會把資料由字串改成Hex表示。
-轉發測試 轉發測試時，多開啟一隻程式設定成轉發Server。
-來源設定成127.0.0.1:54321，目標設定127.0.0.1:12345
-Client連結到轉發Server的來源位置，建立連線時，將會透過傳發Server連到目標Server。
-</p>
+    <p>Looking for an easy-to-use TCP/UDP testing tool? Sokit is a lightweight but powerful solution that helps you test network communications with ease.
+✨ Key Features TCP/UDP Server simulation (supports both string and hex formats) TCP/UDP Client simulation (supports both string and hex formats) Data forwarding/proxy capabilities Cross-platform support (Windows &amp; Linux) Clean and intuitive UI 🔗 Quick Links GitHub Repository Download Link 📖 Quick Start Guide Basic Server-Client Communication Launch two instances of Sokit - one as TCP Server (left) and one as TCP Client (right) Configure IP addresses and ports for both instances Establish the connection between them ...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-03-21 11:09:39 +0000 UTC'>March 21, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Sokit簡易TCP/UDP測試工具分享" href="http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/"></a>
+  <footer class="entry-footer"><span title='2024-03-21 11:09:39 +0800 CST'>March 21, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Sokit - A Powerful TCP/UDP Testing Tool You Should Know" href="http://localhost:1313/posts/sokit/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Golang執行檔編譯時隱藏Console視窗
+    <h2 class="entry-hint-parent">How to hide the Console window when running a Golang compiled file
     </h2>
   </header>
   <div class="entry-content">
-    <p>cd to/your/project/ go build -ldflags -H=windowsgui . </p>
+    <p>🎯 Ninja Ways to Hide Console Window in Go Ever wanted to make your Go applications look more professional by hiding that pesky console window? You’re in the right place! Let’s explore some ninja techniques to achieve this. 🥷
+🚀 Method 1: The Quick Strike (-ldflags) The simplest way to hide the console window is using build flags. Think of it as a stealth mode for your app!
+go build -ldflags -H=windowsgui main.go Pros:
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-03-20 10:37:55 +0000 UTC'>March 20, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to Golang執行檔編譯時隱藏Console視窗" href="http://localhost:1313/posts/golang%E5%9F%B7%E8%A1%8C%E6%AA%94%E7%B7%A8%E8%AD%AF%E6%99%82%E9%9A%B1%E8%97%8Fconsole%E8%A6%96%E7%AA%97/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">PowerShell腳本無法使用
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>問題 在執行 Windows PowerShell 的 .ps1 指令稿時，出現「系統上已停用指令碼執行」的錯誤訊息，該如何解決？
-請參閱 about_Execution_Policies，網址為 https:/go.microsoft.com/fwlink/?LinkID=135170。 位於 線路:1 字元:1 &#43; hexo init blog &#43; ~~~~ &#43; CategoryInfo : SecurityError: (:) [], PSSecurityException &#43; FullyQualifiedErrorId : UnauthorizedAccess 解法 以系統管理員身分執行PowerShell輸入下列指令，並選擇Y確認。
-Set-ExecutionPolicy RemoteSigned 微軟的官方說明 參考來源 https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4 https://officeguide.cc/powershell-set-execution-policy-remote-signed/#google_vignette </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-03-19 11:02:04 +0000 UTC'>March 19, 2024</span>&nbsp;·&nbsp;1 min</footer>
-  <a class="entry-link" aria-label="post link to PowerShell腳本無法使用" href="http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/"></a>
+  <footer class="entry-footer"><span title='2024-03-20 10:37:55 +0800 CST'>March 20, 2024</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to How to hide the Console window when running a Golang compiled file" href="http://localhost:1313/posts/how-to-hide-the-console-window-when-running-a-golang-compiled-file./"></a>
 </article>
     </main>
     

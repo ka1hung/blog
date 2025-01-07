@@ -5,58 +5,33 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Sokit簡易TCP/UDP測試工具分享 | DizzyLand</title>
+<title>Sokit - A Powerful TCP/UDP Testing Tool You Should Know | DizzyLand</title>
 <meta name="keywords" content="tool, share">
-<meta name="description" content="優點特性:
+<meta name="description" content="Looking for an easy-to-use TCP/UDP testing tool? Sokit is a lightweight but powerful solution that helps you test network communications with ease.
+✨ Key Features
 
-模擬TCP/UDP server (字串或是Hex皆可)
-模擬TCP/UDP Client (字串或是Hex皆可)
-轉發功能
+TCP/UDP Server simulation (supports both string and hex formats)
+TCP/UDP Client simulation (supports both string and hex formats)
+Data forwarding/proxy capabilities
+Cross-platform support (Windows &amp; Linux)
+Clean and intuitive UI
 
-Github專案  載點
-建立Server-Client:
+🔗 Quick Links
 
+GitHub Repository
+Download Link
 
-開啟兩隻程式(如下圖)，一隻模擬TCP Server(左)，一隻模擬TCP Client(右)。
+📖 Quick Start Guide
+Basic Server-Client Communication
 
-
-設定好要使用的IP&#43;PORT，並互相建立連線。
-
-
-
-
-
-Client送出字串123，Server接收到字串。
-
-
-Server指定Connection列表中的Client目標，並送出999給Client，Client接收到Server送來的字串999。
-
-
-HEX通訊
-
-
-
-Client送出Hex資料[33 32 31]給Server。(注意:如果要送Hex資料需要使用[ ]將資料包起來)
-
-
-Server可以將資料展開，將會把資料由字串改成Hex表示。
-
-
-
-轉發測試
-
-
-轉發測試時，多開啟一隻程式設定成轉發Server。
-來源設定成127.0.0.1:54321，目標設定127.0.0.1:12345
-
-
-Client連結到轉發Server的來源位置，建立連線時，將會透過傳發Server連到目標Server。
-
+Launch two instances of Sokit - one as TCP Server (left) and one as TCP Client (right)
+Configure IP addresses and ports for both instances
+Establish the connection between them
 
 ">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ae3008a6368e0066eb46796750a58b2b721de03ac8c21e009d13409fa6513123.css" integrity="sha256-rjAIpjaOAGbrRnlnUKWLK3Id4DrIwh4AnRNAn6ZRMSM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -102,6 +77,7 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
 
     </style>
 </noscript>
+
 </head>
 
 <body class="" id="top">
@@ -178,9 +154,9 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Sokit簡易TCP/UDP測試工具分享
+      Sokit - A Powerful TCP/UDP Testing Tool You Should Know
     </h1>
-    <div class="post-meta"><span title='2024-03-21 11:09:39 +0000 UTC'>March 21, 2024</span>&nbsp;·&nbsp;1 min
+    <div class="post-meta"><span title='2024-03-21 11:09:39 +0800 CST'>March 21, 2024</span>&nbsp;·&nbsp;2 min
 
 </div>
   </header> <div class="toc">
@@ -191,64 +167,106 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e5%bb%ba%e7%ab%8bserver-client" aria-label="建立Server-Client:">建立Server-Client:</a></li>
+                    <a href="#-key-features" aria-label="✨ Key Features">✨ Key Features</a></li>
                 <li>
-                    <a href="#hex%e9%80%9a%e8%a8%8a" aria-label="HEX通訊">HEX通訊</a></li>
+                    <a href="#-quick-links" aria-label="🔗 Quick Links">🔗 Quick Links</a></li>
                 <li>
-                    <a href="#%e8%bd%89%e7%99%bc%e6%b8%ac%e8%a9%a6" aria-label="轉發測試">轉發測試</a>
+                    <a href="#-quick-start-guide" aria-label="📖 Quick Start Guide">📖 Quick Start Guide</a><ul>
+                        
+                <li>
+                    <a href="#basic-server-client-communication" aria-label="Basic Server-Client Communication">Basic Server-Client Communication</a><ul>
+                        
+                <li>
+                    <a href="#testing-basic-communication" aria-label="Testing Basic Communication:">Testing Basic Communication:</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-hex-communication-mode" aria-label="🔢 Hex Communication Mode">🔢 Hex Communication Mode</a></li>
+                <li>
+                    <a href="#-data-forwarding-setup" aria-label="🔄 Data Forwarding Setup">🔄 Data Forwarding Setup</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-pro-tips" aria-label="💡 Pro Tips">💡 Pro Tips</a></li>
+                <li>
+                    <a href="#-perfect-for" aria-label="🛠 Perfect For">🛠 Perfect For</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p>優點特性:</p>
+  <div class="post-content"><p>Looking for an easy-to-use TCP/UDP testing tool? Sokit is a lightweight but powerful solution that helps you test network communications with ease.</p>
+<h2 id="-key-features">✨ Key Features<a hidden class="anchor" aria-hidden="true" href="#-key-features">#</a></h2>
 <ul>
-<li>模擬TCP/UDP server (字串或是Hex皆可)</li>
-<li>模擬TCP/UDP Client (字串或是Hex皆可)</li>
-<li>轉發功能</li>
+<li>TCP/UDP Server simulation (supports both string and hex formats)</li>
+<li>TCP/UDP Client simulation (supports both string and hex formats)</li>
+<li>Data forwarding/proxy capabilities</li>
+<li>Cross-platform support (Windows &amp; Linux)</li>
+<li>Clean and intuitive UI</li>
 </ul>
-<p><a href="https://github.com/sinpolib/sokit">Github專案</a>  <a href="https://mega.nz/file/1l9AzS4Q#Q-D9Slf4O52bOtmkjYawedvQR4GxyfRi0hj7svkUHR4">載點</a></p>
-<h3 id="建立server-client">建立Server-Client:<a hidden class="anchor" aria-hidden="true" href="#建立server-client">#</a></h3>
+<h2 id="-quick-links">🔗 Quick Links<a hidden class="anchor" aria-hidden="true" href="#-quick-links">#</a></h2>
+<ul>
+<li><a href="https://github.com/sinpolib/sokit">GitHub Repository</a></li>
+<li><a href="https://mega.nz/file/1l9AzS4Q#Q-D9Slf4O52bOtmkjYawedvQR4GxyfRi0hj7svkUHR4">Download Link</a></li>
+</ul>
+<h2 id="-quick-start-guide">📖 Quick Start Guide<a hidden class="anchor" aria-hidden="true" href="#-quick-start-guide">#</a></h2>
+<h3 id="basic-server-client-communication">Basic Server-Client Communication<a hidden class="anchor" aria-hidden="true" href="#basic-server-client-communication">#</a></h3>
+<ol>
+<li>Launch two instances of Sokit - one as TCP Server (left) and one as TCP Client (right)</li>
+<li>Configure IP addresses and ports for both instances</li>
+<li>Establish the connection between them</li>
+</ol>
+<p><img alt="Server-Client Setup" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/1.png"></p>
+<h4 id="testing-basic-communication">Testing Basic Communication:<a hidden class="anchor" aria-hidden="true" href="#testing-basic-communication">#</a></h4>
+<ul>
+<li>Send &ldquo;123&rdquo; from Client to Server</li>
+<li>Server receives the string</li>
+<li>Server can select specific client from the Connection list</li>
+<li>Send &ldquo;999&rdquo; back to Client from Server</li>
+</ul>
+<h3 id="-hex-communication-mode">🔢 Hex Communication Mode<a hidden class="anchor" aria-hidden="true" href="#-hex-communication-mode">#</a></h3>
+<p><img alt="Hex Mode" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/2.png"></p>
 <ol>
 <li>
-<p>開啟兩隻程式(如下圖)，一隻模擬TCP Server(左)，一隻模擬TCP Client(右)。</p>
+<p>Client can send hex data like [33 32 31] to Server</p>
+<blockquote>
+<p>Note: Hex data must be enclosed in square brackets [ ]</p>
+</blockquote>
 </li>
 <li>
-<p>設定好要使用的IP+PORT，並互相建立連線。</p>
+<p>Server can expand received data to show hex representation</p>
 </li>
 </ol>
-<p><img alt="ref" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/1.png"></p>
-<ol start="3">
-<li>
-<p>Client送出字串123，Server接收到字串。</p>
-</li>
-<li>
-<p>Server指定Connection列表中的Client目標，並送出999給Client，Client接收到Server送來的字串999。</p>
-</li>
-</ol>
-<h3 id="hex通訊">HEX通訊<a hidden class="anchor" aria-hidden="true" href="#hex通訊">#</a></h3>
-<p><img alt="ref" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/2.png"></p>
+<p><img alt="Hex Display" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/3.png"></p>
+<h3 id="-data-forwarding-setup">🔄 Data Forwarding Setup<a hidden class="anchor" aria-hidden="true" href="#-data-forwarding-setup">#</a></h3>
 <ol>
 <li>
-<p>Client送出Hex資料[33 32 31]給Server。(注意:如果要送Hex資料需要使用[ ]將資料包起來)</p>
+<p>Launch a third Sokit instance as forwarding server with:</p>
+<ul>
+<li>Source: 127.0.0.1:54321</li>
+<li>Destination: 127.0.0.1:12345</li>
+</ul>
 </li>
 <li>
-<p>Server可以將資料展開，將會把資料由字串改成Hex表示。</p>
+<p>When client connects to the forwarding server&rsquo;s source address, traffic will be automatically forwarded to the destination server</p>
 </li>
 </ol>
-<p><img alt="ref" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/3.png"></p>
-<h3 id="轉發測試">轉發測試<a hidden class="anchor" aria-hidden="true" href="#轉發測試">#</a></h3>
-<ol>
-<li>
-<p>轉發測試時，多開啟一隻程式設定成轉發Server。</p>
-<p>來源設定成127.0.0.1:54321，目標設定127.0.0.1:12345</p>
-</li>
-<li>
-<p>Client連結到轉發Server的來源位置，建立連線時，將會透過傳發Server連到目標Server。</p>
-</li>
-</ol>
-<p><img alt="ref" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/4.png"></p>
+<p><img alt="Forwarding Setup" loading="lazy" src="/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/4.png"></p>
+<h2 id="-pro-tips">💡 Pro Tips<a hidden class="anchor" aria-hidden="true" href="#-pro-tips">#</a></h2>
+<ul>
+<li>Use hex mode for binary protocol testing</li>
+<li>Forwarding feature is great for debugging proxy scenarios</li>
+<li>Save common configurations for quick reuse</li>
+<li>Monitor traffic in real-time with the built-in logger</li>
+</ul>
+<h2 id="-perfect-for">🛠 Perfect For<a hidden class="anchor" aria-hidden="true" href="#-perfect-for">#</a></h2>
+<ul>
+<li>Network protocol testing</li>
+<li>IoT device communication debugging</li>
+<li>API endpoint verification</li>
+<li>Network proxy testing</li>
+<li>Educational purposes</li>
+</ul>
+<p>Give Sokit a try - it might become your go-to networking tool! Feel free to star the project on GitHub if you find it useful.</p>
 
 
   </div>
@@ -274,8 +292,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on x"
-            href="https://x.com/intent/tweet/?text=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&amp;hashtags=tool%2cshare">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on x"
+            href="https://x.com/intent/tweet/?text=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&amp;hashtags=tool%2cshare">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -283,8 +301,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab&amp;summary=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know&amp;summary=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -292,8 +310,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on reddit"
-            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&title=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f&title=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -301,7 +319,7 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on facebook"
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on facebook"
             href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
@@ -310,8 +328,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on whatsapp"
-            href="https://api.whatsapp.com/send?text=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on whatsapp"
+            href="https://api.whatsapp.com/send?text=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know%20-%20http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -319,8 +337,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on telegram"
-            href="https://telegram.me/share/url?text=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on telegram"
+            href="https://telegram.me/share/url?text=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -328,8 +346,8 @@ Client連結到轉發Server的來源位置，建立連線時，將會透過傳�
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit簡易TCP/UDP測試工具分享 on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=Sokit%e7%b0%a1%e6%98%93TCP%2fUDP%e6%b8%ac%e8%a9%a6%e5%b7%a5%e5%85%b7%e5%88%86%e4%ba%ab&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Sokit - A Powerful TCP/UDP Testing Tool You Should Know on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Sokit%20-%20A%20Powerful%20TCP%2fUDP%20Testing%20Tool%20You%20Should%20Know&u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsokit%25E7%25B0%25A1%25E6%2598%2593tcp-udp%25E6%25B8%25AC%25E8%25A9%25A6%25E5%25B7%25A5%25E5%2585%25B7%25E5%2588%2586%25E4%25BA%25AB%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path

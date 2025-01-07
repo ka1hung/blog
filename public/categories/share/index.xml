@@ -34,57 +34,32 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the policy isn&amp;rsquo;t set to &lt;code&gt;RemoteSigned&lt;/code&gt; or &lt;code&gt;Unrestricted&lt;/code&gt;, run:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Sokit簡易TCP/UDP測試工具分享</title>
-      <link>http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Thu, 21 Mar 2024 11:09:39 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</guid>
-      <description>&lt;p&gt;優點特性:&lt;/p&gt;
+      <title>Sokit - A Powerful TCP/UDP Testing Tool You Should Know</title>
+      <link>http://localhost:1313/posts/sokit/</link>
+      <pubDate>Thu, 21 Mar 2024 11:09:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/sokit/</guid>
+      <description>&lt;p&gt;Looking for an easy-to-use TCP/UDP testing tool? Sokit is a lightweight but powerful solution that helps you test network communications with ease.&lt;/p&gt;
+&lt;h2 id=&#34;-key-features&#34;&gt;✨ Key Features&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;模擬TCP/UDP server (字串或是Hex皆可)&lt;/li&gt;
-&lt;li&gt;模擬TCP/UDP Client (字串或是Hex皆可)&lt;/li&gt;
-&lt;li&gt;轉發功能&lt;/li&gt;
+&lt;li&gt;TCP/UDP Server simulation (supports both string and hex formats)&lt;/li&gt;
+&lt;li&gt;TCP/UDP Client simulation (supports both string and hex formats)&lt;/li&gt;
+&lt;li&gt;Data forwarding/proxy capabilities&lt;/li&gt;
+&lt;li&gt;Cross-platform support (Windows &amp;amp; Linux)&lt;/li&gt;
+&lt;li&gt;Clean and intuitive UI&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/sinpolib/sokit&#34;&gt;Github專案&lt;/a&gt;  &lt;a href=&#34;https://mega.nz/file/1l9AzS4Q#Q-D9Slf4O52bOtmkjYawedvQR4GxyfRi0hj7svkUHR4&#34;&gt;載點&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;建立server-client&#34;&gt;建立Server-Client:&lt;/h3&gt;
+&lt;h2 id=&#34;-quick-links&#34;&gt;🔗 Quick Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sinpolib/sokit&#34;&gt;GitHub Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mega.nz/file/1l9AzS4Q#Q-D9Slf4O52bOtmkjYawedvQR4GxyfRi0hj7svkUHR4&#34;&gt;Download Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-quick-start-guide&#34;&gt;📖 Quick Start Guide&lt;/h2&gt;
+&lt;h3 id=&#34;basic-server-client-communication&#34;&gt;Basic Server-Client Communication&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;開啟兩隻程式(如下圖)，一隻模擬TCP Server(左)，一隻模擬TCP Client(右)。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;設定好要使用的IP+PORT，並互相建立連線。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Launch two instances of Sokit - one as TCP Server (left) and one as TCP Client (right)&lt;/li&gt;
+&lt;li&gt;Configure IP addresses and ports for both instances&lt;/li&gt;
+&lt;li&gt;Establish the connection between them&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/1.png&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Client送出字串123，Server接收到字串。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Server指定Connection列表中的Client目標，並送出999給Client，Client接收到Server送來的字串999。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;hex通訊&#34;&gt;HEX通訊&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/2.png&#34;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Client送出Hex資料[33 32 31]給Server。(注意:如果要送Hex資料需要使用[ ]將資料包起來)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Server可以將資料展開，將會把資料由字串改成Hex表示。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/3.png&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;轉發測試&#34;&gt;轉發測試&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;轉發測試時，多開啟一隻程式設定成轉發Server。&lt;/p&gt;
-&lt;p&gt;來源設定成127.0.0.1:54321，目標設定127.0.0.1:12345&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Client連結到轉發Server的來源位置，建立連線時，將會透過傳發Server連到目標Server。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/4.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Server-Client Setup&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit/1.png&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

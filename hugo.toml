@@ -34,8 +34,23 @@ ShowToc = true
 
 # 搜尋功能設定
 [params.homeInfoParams]
-Title = "歡迎來到我的部落格 👋"
-Content = "這是一個使用 Hugo 和 PaperMod 主題建立的部落格"
+Title = "Welcome to my blog👋"
+Content = """👋 Hey there, Tech Wanderer Here!
+
+I'm a code-slinging adventurer bouncing between different tech realms:
+- 🤖 Embedded Systems Explorer
+- 🏭 Industrial Control Wizard
+- 🏢 Smart Building Architect
+- 🌐 IoT Journey Surfer
+
+Just your friendly neighborhood coder, trying to cram the vast universe of tech into my tiny human brain! 🧠✨
+
+Since the world is way too big and my noggin's way too small, I'm dumping my digital chronicles right here. Think of it as my techie brain's external hard drive! 💾
+
+*Debugging life, one line of code at a time...* 🐛✨
+
+---
+P.S. If my brain were a computer, it'd definitely need more RAM! 😅"""
 
 [params.fuseOpts]
 isCaseSensitive = false
