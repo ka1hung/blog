@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>雜記 on DizzyLand</title>
+    <link>http://localhost:1313/categories/%E9%9B%9C%E8%A8%98/</link>
+    <description>Recent content in 雜記 on DizzyLand</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Mar 2024 11:02:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E9%9B%9C%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell腳本無法使用</title>
+      <link>http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 19 Mar 2024 11:02:04 +0000</pubDate>
+      <guid>http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;問題&#34;&gt;問題&lt;/h1&gt;
+&lt;p&gt;在執行 Windows PowerShell 的 .ps1 指令稿時，出現「系統上已停用指令碼執行」的錯誤訊息，該如何解決？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;請參閱 about_Execution_Policies&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;網址為 https&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;/go.microsoft.com/fwlink/&lt;span style=&#34;color:#66d9ef&#34;&gt;?&lt;/span&gt;LinkID=&lt;span style=&#34;color:#ae81ff&#34;&gt;135170&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;位於 線路&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; 字元&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+ hexo init blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+ ~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    + CategoryInfo          &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; SecurityError&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;) [], PSSecurityException
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    + FullyQualifiedErrorId &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; UnauthorizedAccess
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;解法&#34;&gt;解法&lt;/h1&gt;
+&lt;p&gt;以系統管理員身分執行PowerShell輸入下列指令，並選擇Y確認。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy RemoteSigned
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;微軟的官方說明&#34;&gt;微軟的官方說明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/1.jpg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;參考來源&#34;&gt;參考來源&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4&#34;&gt;https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://officeguide.cc/powershell-set-execution-policy-remote-signed/#google_vignette&#34;&gt;https://officeguide.cc/powershell-set-execution-policy-remote-signed/#google_vignette&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

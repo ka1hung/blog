@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on DizzyLand</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on DizzyLand</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2025 10:52:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ultimate Guide to Chocolatey</title>
+      <link>http://localhost:1313/posts/ultimate-guide-to-chocolatey/</link>
+      <pubDate>Tue, 07 Jan 2025 10:52:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/ultimate-guide-to-chocolatey/</guid>
+      <description>&lt;h1 id=&#34;the-ultimate-guide-to-installing-chocolatey-package-manager-for-windows&#34;&gt;The Ultimate Guide to Installing Chocolatey Package Manager for Windows&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-chocolatey&#34;&gt;What is Chocolatey?&lt;/h2&gt;
+&lt;p&gt;Chocolatey (choco) is a powerful package manager for Windows that automates software installation, upgrading, and uninstallation. Think of it as the Windows equivalent of &lt;code&gt;apt-get&lt;/code&gt; for Linux or &lt;code&gt;brew&lt;/code&gt; for macOS.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows operating system&lt;/li&gt;
+&lt;li&gt;Administrator privileges&lt;/li&gt;
+&lt;li&gt;Internet connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation-steps&#34;&gt;Installation Steps&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-open-powershell-as-administrator&#34;&gt;Step 1: Open PowerShell as Administrator&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Right-click on the Start menu&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;Windows PowerShell (Admin)&amp;rdquo; or &amp;ldquo;Windows Terminal (Admin)&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Confirm the UAC prompt if it appears&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-2-check-execution-policy&#34;&gt;Step 2: Check Execution Policy&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-ExecutionPolicy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the policy isn&amp;rsquo;t set to &lt;code&gt;RemoteSigned&lt;/code&gt; or &lt;code&gt;Unrestricted&lt;/code&gt;, run:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golang-排序</title>
+      <link>http://localhost:1313/posts/golang-%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Mon, 06 Jan 2025 21:52:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/golang-%E6%8E%92%E5%BA%8F/</guid>
+      <description>&lt;h2 id=&#34;一般排序&#34;&gt;一般排序&lt;/h2&gt;
+&lt;p&gt;基本的sort套件。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sort&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort int
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; []&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;{&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Ints&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sot int reverse
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Sort&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Reverse&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;IntSlice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort string
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; []&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aaa&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bbb&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Strings&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sot string reverse
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Sort&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Reverse&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;StringSlice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort float64
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;s3&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; []&lt;span style=&#34;color:#66d9ef&#34;&gt;float64&lt;/span&gt;{&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1.2&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1.9&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;82.333&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;99.11&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Float64s&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sot float64 reverse
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Sort&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Reverse&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Float64Slice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s3&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;s3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;物件排序&#34;&gt;物件排序&lt;/h2&gt;
+&lt;p&gt;物件列表指定參數排序。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sort&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort struct
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; []&lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;49&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;kevin&amp;#34;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;peter&amp;#34;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mary&amp;#34;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;adon&amp;#34;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt; = append(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Data&lt;/span&gt;{&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lily&amp;#34;&lt;/span&gt;})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort by id
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Slice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt; &amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort by Name
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Slice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt; &amp;lt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;Name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;//sort by id reverse
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Slice&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt; &amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;j&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;ds&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;二階排序&#34;&gt;二階排序&lt;/h2&gt;
+&lt;p&gt;如果Name一樣時，希望再透過ID做二次排序。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sokit簡易TCP/UDP測試工具分享</title>
+      <link>http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Thu, 21 Mar 2024 11:09:39 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/</guid>
+      <description>&lt;p&gt;優點特性:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模擬TCP/UDP server (字串或是Hex皆可)&lt;/li&gt;
+&lt;li&gt;模擬TCP/UDP Client (字串或是Hex皆可)&lt;/li&gt;
+&lt;li&gt;轉發功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sinpolib/sokit&#34;&gt;Github專案&lt;/a&gt;  &lt;a href=&#34;https://mega.nz/file/1l9AzS4Q#Q-D9Slf4O52bOtmkjYawedvQR4GxyfRi0hj7svkUHR4&#34;&gt;載點&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;建立server-client&#34;&gt;建立Server-Client:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;開啟兩隻程式(如下圖)，一隻模擬TCP Server(左)，一隻模擬TCP Client(右)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;設定好要使用的IP+PORT，並互相建立連線。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/1.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Client送出字串123，Server接收到字串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server指定Connection列表中的Client目標，並送出999給Client，Client接收到Server送來的字串999。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;hex通訊&#34;&gt;HEX通訊&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/2.png&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Client送出Hex資料[33 32 31]給Server。(注意:如果要送Hex資料需要使用[ ]將資料包起來)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server可以將資料展開，將會把資料由字串改成Hex表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/3.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;轉發測試&#34;&gt;轉發測試&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;轉發測試時，多開啟一隻程式設定成轉發Server。&lt;/p&gt;
+&lt;p&gt;來源設定成127.0.0.1:54321，目標設定127.0.0.1:12345&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Client連結到轉發Server的來源位置，建立連線時，將會透過傳發Server連到目標Server。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/sokit%E7%B0%A1%E6%98%93tcp-udp%E6%B8%AC%E8%A9%A6%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/4.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golang執行檔編譯時隱藏Console視窗</title>
+      <link>http://localhost:1313/posts/golang%E5%9F%B7%E8%A1%8C%E6%AA%94%E7%B7%A8%E8%AD%AF%E6%99%82%E9%9A%B1%E8%97%8Fconsole%E8%A6%96%E7%AA%97/</link>
+      <pubDate>Wed, 20 Mar 2024 10:37:55 +0000</pubDate>
+      <guid>http://localhost:1313/posts/golang%E5%9F%B7%E8%A1%8C%E6%AA%94%E7%B7%A8%E8%AD%AF%E6%99%82%E9%9A%B1%E8%97%8Fconsole%E8%A6%96%E7%AA%97/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd to/your/project/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go build -ldflags -H=windowsgui .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>PowerShell腳本無法使用</title>
+      <link>http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 19 Mar 2024 11:02:04 +0000</pubDate>
+      <guid>http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;問題&#34;&gt;問題&lt;/h1&gt;
+&lt;p&gt;在執行 Windows PowerShell 的 .ps1 指令稿時，出現「系統上已停用指令碼執行」的錯誤訊息，該如何解決？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;請參閱 about_Execution_Policies&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;網址為 https&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;/go.microsoft.com/fwlink/&lt;span style=&#34;color:#66d9ef&#34;&gt;?&lt;/span&gt;LinkID=&lt;span style=&#34;color:#ae81ff&#34;&gt;135170&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;位於 線路&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; 字元&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+ hexo init blog
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+ ~~~~
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    + CategoryInfo          &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; SecurityError&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;) [], PSSecurityException
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    + FullyQualifiedErrorId &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt; UnauthorizedAccess
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;解法&#34;&gt;解法&lt;/h1&gt;
+&lt;p&gt;以系統管理員身分執行PowerShell輸入下列指令，並選擇Y確認。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-ExecutionPolicy RemoteSigned
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;微軟的官方說明&#34;&gt;微軟的官方說明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;ref&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/powershell%E8%85%B3%E6%9C%AC%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8/1.jpg&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;參考來源&#34;&gt;參考來源&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4&#34;&gt;https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://officeguide.cc/powershell-set-execution-policy-remote-signed/#google_vignette&#34;&gt;https://officeguide.cc/powershell-set-execution-policy-remote-signed/#google_vignette&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

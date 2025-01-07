@@ -1,0 +1,88 @@
+baseURL = 'https://ka1hung.github.io/'
+languageCode = 'en-us'
+title = 'DizzyLand'
+theme = 'PaperMod'
+paginate = 10
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# 啟用搜尋功能
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# 分類設定
+[taxonomies]
+tag = "tags"
+category = "categories"
+series = "series"
+
+
+[params]
+defaultTheme = "auto"
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowToc = true
+
+# 搜尋功能設定
+[params.homeInfoParams]
+Title = "歡迎來到我的部落格 👋"
+Content = "這是一個使用 Hugo 和 PaperMod 主題建立的部落格"
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 0
+keys = ["title", "permalink", "summary", "content"]
+
+# 社群連結
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/ka1hung"
+
+# 主選單設定
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "Catagories"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 30
+
+[[menu.main]]
+identifier = "series"
+name = "seriers"
+url = "/series/"
+weight = 40
+
+[[menu.main]]
+identifier = "archives"
+name = "archives"
+url = "/archives/"
+weight = 50
+
+
+
+# [[params.socialIcons]]
+# name = "twitter"
+# url = "https://twitter.com/"
+
