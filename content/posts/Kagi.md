@@ -28,26 +28,6 @@ Too lazy to read that long article? (We've all been there!) Kagi's Universal Sum
 #### Deep Search
 Ever felt like you're only scratching the surface? Deep Search dives into the web's hidden gems, accessing premium content and specialized databases. It's like having a research assistant with superpowers!
 
-### 💎 Subscription Plans That Make Sense
-
-#### Personal Plan ($10/month)
-- Perfect for solo searchers
-- 1000 Deep Searches monthly
-- All premium features included
-- Unlimited basic searches
-
-#### Family Plan ($18/month)
-- Share with up to 5 family members
-- 3000 shared Deep Searches
-- Everyone gets their own personalized experience
-- Perfect for households who love to learn
-
-#### Professional Plan ($25/month)
-- For the power users
-- 3000 Deep Searches monthly
-- Priority support
-- Advanced customization options
-
 ## 🎉 Why You'll Love Kagi
 
 1. **Speed**: Results faster than your coffee machine
