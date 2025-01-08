@@ -11,6 +11,12 @@ buildExpired = false
 
 googleAnalytics="G-SL32FHR5BB"
 
+# 開啟搜尋功能
+[params.search]
+enabled = true
+# 搜尋結果要包含的內容
+searchContent = true
+
 # 啟用搜尋功能
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -32,7 +38,6 @@ ShowCodeCopyButtons = true
 ShowRssButtonInSectionTermList = true
 ShowToc = true
 
-# 搜尋功能設定
 [params.homeInfoParams]
 Title = "Welcome to my blog👋"
 Content = """👋 Hey there, Tech Wanderer Here!
@@ -52,12 +57,14 @@ Since the world is way too big and my noggin's way too small, I'm dumping my dig
 ---
 P.S. If my brain were a computer, it'd definitely need more RAM! 😅"""
 
+
+# 搜尋功能設定
 [params.fuseOpts]
 isCaseSensitive = false
 shouldSort = true
 location = 0
 distance = 1000
-threshold = 0.4
+threshold = 0.2
 minMatchCharLength = 0
 keys = ["title", "permalink", "summary", "content"]
 

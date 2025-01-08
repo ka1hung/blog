@@ -136,10 +136,10 @@ Input: ["A11", "A3", "A2", "A1"]
 Standard sort result: ["A1", "A11", "A2", "A3"]
 Desired result: ["A1", "A2", "A3", "A11"]
 Natural sorting solves this problem perfectly! It's especially useful for:
-
-Version numbers,
-IP addresses,
-File names with numbers,
+  
+Version numbers  
+IP addresses  
+File names with numbers
 
 ### Installation
 First, install the required package:
