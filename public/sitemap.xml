@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-01-09T11:09:39+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-01-09T11:09:39+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-01-08T13:40:24+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-01-08T13:40:24+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/kagi/</loc>
-    <lastmod>2025-01-08T13:40:24+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-01-08T13:40:24+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/share/</loc>

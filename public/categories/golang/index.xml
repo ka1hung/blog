@@ -54,17 +54,5 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;-object-sorting&#34;&gt;🎯 Object Sorting&lt;/h2&gt;
 &lt;p&gt;How to sort a list of objects by specific fields:&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>How to hide the Console window when running a Golang compiled file</title>
-      <link>http://localhost:1313/posts/how-to-hide-the-console-window-when-running-a-golang-compiled-file./</link>
-      <pubDate>Wed, 20 Mar 2024 10:37:55 +0800</pubDate>
-      <guid>http://localhost:1313/posts/how-to-hide-the-console-window-when-running-a-golang-compiled-file./</guid>
-      <description>&lt;h2 id=&#34;-ninja-ways-to-hide-console-window-in-go&#34;&gt;🎯 Ninja Ways to Hide Console Window in Go&lt;/h2&gt;
-&lt;p&gt;Ever wanted to make your Go applications look more professional by hiding that pesky console window? You&amp;rsquo;re in the right place! Let&amp;rsquo;s explore some ninja techniques to achieve this. 🥷&lt;/p&gt;
-&lt;h2 id=&#34;-method-1-the-quick-strike--ldflags&#34;&gt;🚀 Method 1: The Quick Strike (-ldflags)&lt;/h2&gt;
-&lt;p&gt;The simplest way to hide the console window is using build flags. Think of it as a stealth mode for your app!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go build -ldflags -H&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;windowsgui main.go
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pros:&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

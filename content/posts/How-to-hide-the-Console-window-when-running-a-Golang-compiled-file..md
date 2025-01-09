@@ -1,7 +1,6 @@
 +++
 title= "How to hide the Console window when running a Golang compiled file"
 date= "2024-03-20T10:37:55+08:00"
-categories=["golang"] 
 tags=["windows","golang"] 
 +++
 

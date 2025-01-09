@@ -39,7 +39,7 @@ ShowRssButtonInSectionTermList = true
 ShowToc = true
 
 [params.homeInfoParams]
-Title = "Welcome to my blog👋"
+Title = "Welcome to my blog"
 Content = """👋 Hey there, Tech Wanderer Here!
 
 I'm a code-slinging adventurer bouncing between different tech realms:
@@ -79,12 +79,6 @@ identifier = "search"
 name = "Search"
 url = "/search/"
 weight = 10
-
-[[menu.main]]
-identifier = "categories"
-name = "Catagories"
-url = "/categories/"
-weight = 20
 
 [[menu.main]]
 identifier = "tags"
