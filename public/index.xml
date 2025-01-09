@@ -6,8 +6,17 @@
     <description>Recent content on DizzyLand</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2025 13:40:24 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2025 09:09:39 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Locks and Synchronization Mechanisms in Golang&#39;s sync Package</title>
+      <link>http://localhost:1313/posts/go-concurrency-locks/</link>
+      <pubDate>Thu, 09 Jan 2025 09:09:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/go-concurrency-locks/</guid>
+      <description>&lt;p&gt;In Golang&amp;rsquo;s standard library &lt;code&gt;sync&lt;/code&gt;, &lt;code&gt;sync.Mutex&lt;/code&gt; is a basic mutual exclusion lock used to protect shared resources and prevent multiple goroutines from simultaneously accessing or modifying data. The &lt;code&gt;sync&lt;/code&gt; package provides several types of locks and synchronization mechanisms. Here&amp;rsquo;s a comprehensive overview of the main lock types and their differences:&lt;/p&gt;
+&lt;h2 id=&#34;1-syncmutex-mutual-exclusion-lock&#34;&gt;1. sync.Mutex (Mutual Exclusion Lock)&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;sync.Mutex&lt;/code&gt; is the most basic lock type used to protect critical sections, ensuring only one goroutine can enter the locked area.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Kagi: The Search Engine That Actually Respects Your Brain (and Privacy!)</title>
       <link>http://localhost:1313/posts/kagi/</link>
